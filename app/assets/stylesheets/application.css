@@ -15,3 +15,7 @@
  *= require font-awesome
  */
  @import "font-awesome";
+
+ nav {
+   background-color: rgb(83,168,233);
+ }

@@ -1,13 +1,10 @@
 <div class="row">
 <div class="col-6">
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <%= link_to root_path do %>
     <%= fa_icon "twitter 2x", class: "text-light"%>
     <%end%>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -18,6 +15,26 @@
           </li>
       </ul>
         <ul class= "navbar-nav  ms-auto mb-lg-0">
+        <li class="nav-item">
+      <%= link_to root_path do %>
+    <%= fa_icon "pencil", class: "nav-link"%>
+    <%end%>
+    </li>
+    <li class="nav-item">
+      <%= link_to root_path do %>
+    <%= fa_icon "envelope", class: "nav-link"%>
+    <%end%>
+      </li>
+    <li class="nav-item">
+      <%= link_to root_path do %>
+    <%= fa_icon "search", class: "nav-link"%>
+    <%end%>
+      </li>
+    <li class="nav-item">
+      <%= link_to root_path do %>
+    <%= fa_icon "cog", class: "nav-link"%>
+    </li>
+    <%end%>
         <%if current_user%>
         <li class = "nav-item">
         <%= link_to current_user.username, edit_user_password_path, class: "nav-link"%>
