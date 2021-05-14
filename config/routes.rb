@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   
   
-  resources :tweets
+  
   get 'new_tweet', to: 'tweets#new'
   post 'new_tweet', to: 'tweets#create'
+  resources :tweets
   devise_for :users, controllers:  { registrations: 'users/registrations' }
   root to: "tweets#index"
  
