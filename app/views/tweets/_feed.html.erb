@@ -1,17 +1,13 @@
 <% @tweets.each do |tweet|%>
-          <strong>tweet.user.name<strong><br>
-          <small>tweet.user.username</small><br>
-          <p><%= tweet.tweet%> </p>
+          <strong><%= tweet.author.full_name%><strong><br>
+          <small><%=tweet.author.username%></small><br>
+          <p><%= tweet.text%> </p>
         </div>
         <nav class="level">
-          <div class="level-left is-mobile">
-            <%= link_to tweet, class:"level-left" do %>
-              <span class="icon"><i class="fa fa-link" aria-hidden = "true"></i></span>
-            <%end%>
-             <%= link_to edit_tweet_path do %>
-    <%= fa_icon "pencil", class: "nav-link"%>
-    <%end%>
-            <%= link_to tweet, method: :delete, data: {confirm: "Are you sure you want to delete this tweet?"} do %>
+             <%= link_to edit_tweet_path(tweet) do %>
+              <%= fa_icon "pencil", class: "nav-link"%>
+              <%end%>
+            <%= link_to tweet_path(tweet), method: :delete, data: {confirm: "Are you sure you want to delete this tweet?"} do %>
               <span class="icon"><i class="fa fa-trash-o"></i></span>
             <%end%>        
           </div>
