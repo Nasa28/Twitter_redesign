@@ -6,12 +6,12 @@
     <%end%>
     </div>
   <%end%>
-  <div class="field">
-    <%= form.label :text %>
-    <%= form.text_area :text %>
+  <div class="form-field">
+    <%= form.label :Tweet %>
+    <%= form.text_area :text, class: "form-control", placeholder: "Type your tweet here" %>
   </div>
-
+    <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Post a tweet"%>
   </div>
 <% end %>

@@ -1,4 +1,21 @@
-<%= render 'form'%>
-<%= render 'feed'%>
+<div class="row d-flex">
+  <div class="col-3">
+    <%= render 'menu'%>
+  </div>
+  <div class="col-5">
+  <%= render partial: 'layouts/navbar1' %>
+    <%= render 'form'%>
+    <%= render 'feed'%>
+  </div>
 
-<%= link_to 'New Tweet', new_tweet_path %>
+  <div class="col-3">
+    <%= render 'follow'%>
+
+    <%= render 'trends'%>
+  </div>
+
+
+
+
+
+</div>
