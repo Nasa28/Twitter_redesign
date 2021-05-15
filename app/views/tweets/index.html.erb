@@ -1,21 +1,18 @@
-<div class="row d-flex">
-  <div class="col-3">
-    <%= render 'menu'%>
-  </div>
-  <div class="col-5">
-  <%= render partial: 'layouts/navbar1' %>
-    <%= render 'form'%>
-    <%= render 'feed'%>
-  </div>
+    
+    <div class="row mx-auto">
+    
+      <div class="col-2">
+        <%= render 'menu'%>
+      </div>
+       
+      <div class="col-7">
+      <%= render partial: 'layouts/navbar1' %>
+        <%= render 'form'%>
+        <%= render 'feed'%>
+      </div>  
 
-  <div class="col-3">
-    <%= render 'follow'%>
-
-    <%= render 'trends'%>
-  </div>
-
-
-
-
-
-</div>
+       <div class="col pull-right">
+          <%= render 'follow'%>
+          <%= render 'trends'%>
+        </div>
+    </div>
