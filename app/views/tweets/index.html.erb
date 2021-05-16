@@ -1,18 +1,23 @@
-    
-    <div class="row mx-auto">
-    
-      <div class="col-2">
+     <div class="grid-container">
+     <div>
         <%= render 'menu'%>
       </div>
-       
-      <div class="col-7">
+      <div> <%= render partial: 'layouts/navbar' %>
+      <div class = "my-row" >
+      <div class="col-9">
+      
       <%= render partial: 'layouts/navbar1' %>
         <%= render 'form'%>
         <%= render 'feed'%>
       </div>  
 
-       <div class="col pull-right">
+       <div class="col">
           <%= render 'follow'%>
           <%= render 'trends'%>
         </div>
     </div>
+      </div>
+      
+     </div>
+    
+    
