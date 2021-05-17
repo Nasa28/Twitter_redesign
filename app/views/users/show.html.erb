@@ -1,24 +1,23 @@
-     <div class="grid-container">
-     <div>
-        <%= render 'tweets/menu'%>
-      </div>
-      <div> <%= render partial: 'layouts/navbar' %>
-      <div class = "my-row" >
-      <div class="col-9">
-      
+<div class="grid-container">
+  <div>
+    <%= render 'tweets/menu'%>
+  </div>
+  <div> 
+    <%= render partial: 'layouts/navbar' %>
+    <div class = "my-row" >
+    <div class="col-9">
       <%= render partial: 'layouts/navbar1' %>
         <%= render 'tweets/form'%>
         <%= render 'tweets/feed'%>
-      </div>  
+    </div>  
 
-       <div class="col">
-        <%= render 'users/profile'%>
-          <%= render 'tweets/follow'%>
-         
-        </div>
-    </div>
+  <div class="col">
+    <%= render 'users/profile'%>
+    <%= render 'tweets/follow'%>     
+  </div>
+  </div>
       </div>
       
-     </div>
+</div>
     
     
