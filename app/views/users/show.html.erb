@@ -1,3 +1,24 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<%= @user.full_name %>
+     <div class="grid-container">
+     <div>
+        <%= render 'tweets/menu'%>
+      </div>
+      <div> <%= render partial: 'layouts/navbar' %>
+      <div class = "my-row" >
+      <div class="col-9">
+      
+      <%= render partial: 'layouts/navbar1' %>
+        <%= render 'tweets/form'%>
+        <%= render 'tweets/feed'%>
+      </div>  
+
+       <div class="col">
+        <%= render 'users/profile'%>
+          <%= render 'tweets/follow'%>
+         
+        </div>
+    </div>
+      </div>
+      
+     </div>
+    
+    
