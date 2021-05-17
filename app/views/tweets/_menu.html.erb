@@ -1,5 +1,25 @@
 <div class="menu">
     <strong><%= current_user.full_name.upcase%></strong>
+
+    <div class = 'follows'>
+    <div>
+    <p>
+    count
+    </p>
+    <p>
+    following
+    </p>
+    </div>
+
+    <div>
+    <p>
+    count
+    </p>
+    <p>
+    followers
+    </p>
+    </div>
+    </div>
     <ul>
         <%= link_to root_path do %>
             <%= fa_icon "home 2x", class: "nav-link text-light"%>
