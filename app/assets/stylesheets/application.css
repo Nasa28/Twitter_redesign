@@ -50,7 +50,8 @@ img {
 
 .pro {
   display: flex;
-  justify-content: start;
+  padding-left: 20px;
+  margin: 10px 0;
   align-items: center;
 
 }
