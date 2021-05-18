@@ -1,9 +1,12 @@
 <div>    
     <% @tweets.each do |tweet|%>
           <div>
-          <strong><%= tweet.author.full_name%><strong><br>
-          <small><%=tweet.author.username%></small><br>
-            <%= tweet.text%> 
+           <%= link_to user_path(tweet.author) do %>
+                  <%= tweet.author.full_name %>
+                <% end %>
+          <br>
+          <small><%= tweet.author.username%></small><br>
+            <%= tweet.text  %>
              <%= link_to edit_tweet_path(tweet) do %>
               <%= fa_icon "pencil", class: "nav-link"%>
               <%end%>
