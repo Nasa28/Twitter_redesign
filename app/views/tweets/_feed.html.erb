@@ -1,11 +1,10 @@
 <div>    
     <% @tweets.each do |tweet|%>
           <div>
-           <%= link_to user_path(tweet.author) do %>
+           <%= link_to user_path(tweet.author), class: "text-decoration-none" do %>
                   <%= tweet.author.full_name %>
                 <% end %>
           <br>
-          <small><%= tweet.author.username%></small><br>
             <%= tweet.text  %>
              <%= link_to edit_tweet_path(tweet) do %>
               <%= fa_icon "pencil", class: "nav-link"%>
