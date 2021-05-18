@@ -41,3 +41,20 @@
   display: grid;
   grid-template-columns: 200px auto;
 }
+
+img {
+  border-radius: 50%;
+  height: 95px;
+  width: 95px;
+}
+
+.pro {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+}
+
+.pro div:first-child {
+  padding-right: 20px;
+}
