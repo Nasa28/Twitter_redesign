@@ -10,13 +10,12 @@
 </div>
 
 <div>
-<% @tweets.each do |tweet|%>
           <div class = "text-center">
            
-        <strong> <%= tweet.author.full_name %>  </strong>
+        <strong> <%= @user.full_name %>  </strong>
 
           <br>
-          <p>@<%= tweet.author.username%></p><br>
+          <p>@<%= @user.username%></p><br>
       </div>
-          <%end%>
+         
 </div>

@@ -10,6 +10,7 @@ class TweetsController < ApplicationController
 
   # GET /tweets/1 or /tweets/1.json
   def show
+  
   end
 
   # GET /tweets/new
@@ -26,7 +27,7 @@ class TweetsController < ApplicationController
     @tweet  = current_user.tweets.build(tweet_params)
     respond_to do |format|
       if @tweet.save
-        format.html { redirect_to @tweet, notice: "Tweet was successfully created." }
+        format.html { redirect_to root_path, notice: "Tweet was successfully created." }
         format.json { render :show, status: :created, location: @tweet }
       else
         format.html { render :new, status: :unprocessable_entity }
