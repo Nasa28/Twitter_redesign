@@ -12,11 +12,27 @@ class User < ApplicationRecord
   has_one_attached :photo, dependent: :destroy
   has_one_attached :cover_image, dependent: :destroy
 
+  has_many :followers, class_name: 'Following', foreign_key: 'follower_id'
+  has_many :followed, class_name: 'Following', foreign_key: 'followed_id'
+
+
   def email_required?
     false
   end
 
   def will_save_change_to_email?
     false
+  end
+
+def follow(other_user)
+  following << other_user
+  end
+
+  def unfollow(other_user)
+  following.delete(other_user)
+  end
+
+  def following?(other_user)
+  following.include?(other_user)
   end
 end
