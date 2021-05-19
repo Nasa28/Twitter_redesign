@@ -1,5 +1,5 @@
 <div class="menu">
-    <strong><%= current_user.full_name.upcase%></strong>
+    <strong><%= current_user.full_name.upcase if signed_in?%></strong>
 
     <div class = 'follows d-flex  justify-content-around'>
     <div>

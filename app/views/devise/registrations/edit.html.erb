@@ -1,4 +1,4 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2>Account <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -6,10 +6,11 @@
 <div class="form-group">
   <div class="row">
     <div class="col-sm-3">
-      <%= image_tag user_avatar(resource, 100), class: "rounded-circle"%>
+      <%= image_tag user_photo(resource, 1000), class: "rounded-circle"%>
     </div>
     <div class="col-sm-8">
-      <%= f.file_field :photo %>
+      <%= f.file_field :photo, placeholder: 'Upload picture',
+        direct_upload: true%>
     </div>
 
   </div>
@@ -44,7 +45,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Update Chnages" %>
   </div>
 <% end %>
 

@@ -54,6 +54,9 @@ end
 gem "font-awesome-rails"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'aws-sdk-s3'
+gem 'aws-sdk-s3', require: false
 gem 'dotenv-rails'
 gem 'gravatar_image_tag', '~> 1.2'
+gem 'image_processing', '~> 1.12', '>= 1.12.1'
+gem 'active_storage_validations', '~> 0.9.3'
+gem 'mini_magick'
