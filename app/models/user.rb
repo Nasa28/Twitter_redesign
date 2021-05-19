@@ -10,7 +10,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :tweets, foreign_key: 'author_id', dependent: :destroy
   has_one_attached :photo, dependent: :destroy
-  
+  has_one_attached :cover_image, dependent: :destroy
 
   def email_required?
     false

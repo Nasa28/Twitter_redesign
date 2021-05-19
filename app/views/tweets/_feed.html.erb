@@ -1,16 +1,24 @@
 <div>    
     <% @tweets.each do |tweet|%>
+          
+          <div class="d-flex mt-4 justify-item-center">
+          <div>
+            <%= image_tag user_photo(tweet.author, 1000), class: "rounded-circle"  if signed_in?%>
+          </div>
           <div>
            <%= link_to user_path(tweet.author), class: "text-decoration-none" do %>
                   <%= tweet.author.full_name %>
                 <% end %>
           <br>
+          <p>
             <%= tweet.text  %>
+            </p>
           </div>
+           </div>
           <div>
+         
           <%= image_tag tweet.image if tweet.image.attached? %>
           </div>
-          <br>
             Tweeted @<%= tweet.created_at%>
             <span> <%= link_to 'Edit', edit_tweet_path(tweet) %></span>
               

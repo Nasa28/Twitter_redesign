@@ -8,7 +8,8 @@
     <div class="col-sm-3">
       <%= image_tag user_photo(resource, 1000), class: "rounded-circle"%>
     </div>
-    <div class="col-sm-8">
+    <div>
+    <br>
       <%= f.file_field :photo, placeholder: 'Upload picture',
         direct_upload: true%>
     </div>
@@ -16,6 +17,7 @@
   </div>
     
   </div>
+
   <div class="form-group">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -43,9 +45,15 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
+<div class="row">
+    <div class="col-sm-8">
+     <span>Change your background image</span> <%= f.file_field :cover_image, placeholder: 'Upload picture',
+        direct_upload: true%>
+    </div>
 
+  </div>
   <div class="actions">
-    <%= f.submit "Update Chnages" %>
+    <%= f.submit "Update Changes" %>
   </div>
 <% end %>
 
