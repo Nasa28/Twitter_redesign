@@ -6,12 +6,14 @@
                 <% end %>
           <br>
             <%= tweet.text  %>
-             <%= link_to edit_tweet_path(tweet) do %>
-              <%= fa_icon "pencil", class: "nav-link"%>
-              <%end%>
+             <%= link_to 'Edit', edit_tweet_path(tweet) %>
+              
             <%= link_to tweet_path(tweet), method: :delete, data: {confirm: "Are you sure you want to delete this tweet?"} do %>
               <span class="icon"><i class="fa fa-trash"></i></span>
             <%end%> 
+          </div>
+          <div>
+          <%= image_tag tweet.image if tweet.image.attached? %>
           </div>
           <br>
     <%end%>
