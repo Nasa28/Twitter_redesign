@@ -56,3 +56,4 @@ gem "font-awesome-rails"
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'aws-sdk-s3'
 gem 'dotenv-rails'
+gem 'gravatar_image_tag', '~> 1.2'
