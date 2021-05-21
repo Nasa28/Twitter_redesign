@@ -1,10 +1,10 @@
 <div class="menu">
 <div class = "d-flex">
 <div >
-    <%= image_tag user_photo(current_user, 1000), class: "rounded" if signed_in?%>
+<%= profile_photo(current_user)%>
     </div>
     
-    <div><strong><%= current_user.full_name.upcase if signed_in?%></strong></div>
+    <div><strong><%= current_user.full_name.split.map(&:capitalize)*' ' if signed_in?%></strong></div>
 </div>
     <div class = 'follows d-flex  justify-content-around'>
     <div>

@@ -33,7 +33,7 @@
 
  .menu {
    background-color: rgb(33,50,71);
-
+  height: auto;
  }
 
  .grid-container {
