@@ -33,7 +33,7 @@
 
  .menu {
    background-color: rgb(33,50,71);
-   height: 35em;
+
  }
 
  .grid-container {
@@ -59,8 +59,14 @@ img {
   padding-right: 20px;
 }
 
-.ok{ 
+.cover_image{ 
   min-width: 100%;
-  min-height: 300px;
+  min-height: 350px;
   display: block; /* remove extra space below image */
     }
+
+.rounded {
+  height: 70px;
+  width: 70px;
+  padding-right:5px;
+}

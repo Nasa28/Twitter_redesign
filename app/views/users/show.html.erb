@@ -7,8 +7,7 @@
     <div class = "my-row" >
     <div class="col-9">
     <div>
-       <%= image_tag cover_photo(@user, 1000), class: "ok"%>
-          </div>
+<%= background_image(@user)%>          </div>
           <div class="pad">
       <%= render partial: 'layouts/navbar1' %>
         <%= render 'tweets/form'%>

@@ -1,6 +1,11 @@
 <div class="menu">
-    <strong><%= current_user.full_name.upcase if signed_in?%></strong>
-
+<div class = "d-flex">
+<div >
+    <%= image_tag user_photo(current_user, 1000), class: "rounded" if signed_in?%>
+    </div>
+    
+    <div><strong><%= current_user.full_name.upcase if signed_in?%></strong></div>
+</div>
     <div class = 'follows d-flex  justify-content-around'>
     <div>
     <strong>
