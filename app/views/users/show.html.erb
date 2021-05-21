@@ -6,10 +6,14 @@
     <%= render partial: 'layouts/navbar' %>
     <div class = "my-row" >
     <div class="col-9">
+    <div>
+       <%= image_tag cover_photo(@user, 1000), class: "ok"%>
+          </div>
+          <div class="pad">
       <%= render partial: 'layouts/navbar1' %>
-     
         <%= render 'tweets/form'%>
         <%= render 'tweets/feed'%>
+        </div>
     </div>  
 
   <div class="col">

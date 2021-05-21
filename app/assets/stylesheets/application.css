@@ -27,9 +27,8 @@
   display: flex;
  }
 
- .col-9 {
+ .pad {
    padding: 0 30px;
-   margin-left: 10px;
  }
 
  .menu {
@@ -59,3 +58,9 @@ img {
 .pro div:first-child {
   padding-right: 20px;
 }
+
+.ok{ 
+  min-width: 100%;
+  min-height: 300px;
+  display: block; /* remove extra space below image */
+    }

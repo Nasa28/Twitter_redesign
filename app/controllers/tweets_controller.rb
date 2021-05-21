@@ -25,6 +25,7 @@ class TweetsController < ApplicationController
   # POST /tweets or /tweets.json
   def create
     @tweet  = current_user.tweets.build(tweet_params)
+    @tweet.image.attach(params[:tweet][:image])
     respond_to do |format|
       if @tweet.save
         format.html { redirect_to root_path, notice: "Tweet was successfully created." }

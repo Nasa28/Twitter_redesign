@@ -1,9 +1,11 @@
+
+
 <div>    
     <% @tweets.each do |tweet|%>
           
           <div class="d-flex mt-4 justify-item-center">
           <div>
-            <%= image_tag user_photo(tweet.author, 1000), class: "rounded-circle"  if signed_in?%>
+            <%= image_tag user_photo(tweet.author, 100), class: "rounded-circle"  if signed_in?%>
           </div>
           <div>
            <%= link_to user_path(tweet.author), class: "text-decoration-none" do %>

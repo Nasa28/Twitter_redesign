@@ -7,4 +7,11 @@ module ApplicationHelper
     end
   end
 
+  def cover_photo(user, size =800)
+    if user.cover_image.attached?
+      user.cover_image.variant(resize: "#{size}x#{size}")
+    else
+      gravatar_image_url(user.email, size: size)
+    end
+  end
 end
