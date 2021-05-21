@@ -35,6 +35,4 @@ def follow(other_user)
   def following?(other_user)
   following.include?(other_user)
   end
-
-  
 end
