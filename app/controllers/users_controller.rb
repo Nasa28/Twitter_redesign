@@ -6,16 +6,24 @@ class UsersController < ApplicationController
     @tweets = Tweet.all
     @users = User.all
   end
-  def update
-      if @user.update(user_params)
-  
-      else
-        render :edit
+
+  def follow_user(user)
+    User.find(params[:id])
+    current_user.follow(user)
+    if current_user.following?(user)
+      flash[:notice] = "You are now following #{user.username}"
+
+    else flash.now[:alert] = "Try again"
     end
   end
 
-private
-  def user_params
-    params.require(:tweet).permit(:photo, :cover_image)
+  def unfollow_user(user)
+    User.find(params[:id])
+    current_user.unfollow(user)
+    if !current_user.following?(user)
+      flash[:notice] = "You have unfollowed #{user.username}"
+
+    else flash.now[:alert] = "Try again"
+    end
   end
 end
