@@ -1,11 +1,7 @@
-  <div >
-    <p>Who to follow</p>
-        <div>
-        <% @users.each do |user| %>
-        <ul>
-        <%= link_to user.full_name, user_path(user) %>
-        </ul>
-        <%end%>
-          
-        </div>
-  </div>
+  <p>WHO TO FOLLOW</p>
+        <% !@user.includes(:followed).map do |user| %>  
+        <div class = 'd-flex justify-content-start m-2 align-items-center'>
+        <%= profile_photo(user)%> 
+                <h6 ><%=link_to user.full_name, user_path(user), class:"p-2 text-decoration-none" %></h6>
+                </div>
+        <% end %>

@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   def follow_user
     user = User.find(params[:id])
-    follow = user.followers.build(followed: current_user)
+    follow = Following.create(followed_id:current_user.id, follower_id: user.id)
     if follow.save
       flash[:notice] = "You are now follwoing #{user.username}"
       redirect_to user_path(user)
@@ -19,8 +19,8 @@ class UsersController < ApplicationController
   end
   def unfollow_user
     user = User.find(params[:id])
-    list = Following.find_by(followed: current_user)
-    list.destroy
+    unfollow = Following.find_by(followed: current_user)
+    unfollow.destroy
       flash[:notice] = "You unfollowed #{user.username}"
       redirect_to user_path(user)
     end

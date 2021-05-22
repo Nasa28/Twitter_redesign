@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def user_photo(user, size =50)
+  def user_photo(user, size =10)
     if user.photo.attached?
       user.photo.variant(resize: "#{size}x#{size}!")
     else
