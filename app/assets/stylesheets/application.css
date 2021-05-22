@@ -33,12 +33,12 @@
 
  .menu {
    background-color: rgb(33,50,71);
-  height: auto;
+  height: 100%;
  }
 
  .grid-container {
   display: grid;
-  grid-template-columns: 200px auto;
+  grid-template-columns: 180px auto;
 }
 
 img {

@@ -4,28 +4,17 @@
 <%= menu_photo(current_user)%>
     </div>
     
-    <div><strong><%= current_user.full_name.split.map(&:capitalize)*' ' if signed_in?%></strong></div>
+    <div><strong class= "text-secondary"><%= current_user.full_name.split.map(&:capitalize)*' ' if signed_in?%></strong></div>
 </div>
-    <div class = 'follows d-flex  justify-content-around align-items-center'>
-    <div>
-    <strong class ="text-light" >
-    <%= current_user.followed.count if signed_in?%>
-    </strong>
-    <p class = 'text-secondary'>
-    Following
-    </p>
-    </div>
-
-    <div>
-    <strong class ="text-light">
-   <%= current_user.followers.count if signed_in?%>
-    </strong>
-    <p class = 'text-secondary'>
-    Followers
-    </p>
-    </div>
-    </div>
-    <ul>
+    <div class="user-photo d-flex flex-wrap justify-content-between p-2 border-bottom border-dark text-light">
+            <div class="follow text-center ">
+                <h5><%= current_user.followed.count%> <br><small class= "text-secondary">Following</small></h5>
+            </div>
+            <div class="follow text-center">
+                <h5><%= current_user.followers.count %><br><small class= "text-secondary">Followers</small></h5>
+            </div>
+        </div>
+    <ul >
         <%= link_to root_path do %>
             <%= fa_icon "home 2x", class: "nav-link text-light"%>
         <%end%> 
