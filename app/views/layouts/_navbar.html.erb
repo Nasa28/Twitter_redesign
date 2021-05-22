@@ -10,26 +10,7 @@
           </li>
       </ul>
         <ul class= "navbar-nav  ms-auto mb-lg-0">
-        <li class="nav-item">
-      <%= link_to root_path do %>
-    <%= fa_icon "pencil", class: "nav-link"%>
-    <%end%>
-    </li>
-    <li class="nav-item">
-      <%= link_to root_path do %>
-    <%= fa_icon "envelope", class: "nav-link"%>
-    <%end%>
-      </li>
-    <li class="nav-item">
-      <%= link_to root_path do %>
-    <%= fa_icon "search", class: "nav-link"%>
-    <%end%>
-      </li>
-    <li class="nav-item">
-      <%= link_to root_path do %>
-    <%= fa_icon "cog", class: "nav-link"%>
-    </li>
-    <%end%>
+   
         <%if current_user%>
         <li class = "nav-item">
         <%= link_to current_user.username, edit_user_registration_path, class: "nav-link"%>

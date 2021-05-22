@@ -1,19 +1,32 @@
 <div class="pro ">
 <div class = "add_button">
-   
+   <%= follow_buttons(@user)%>
     </div> 
     <div>
     <%= profile_photo(@user)%>
     </div>
 </div>
-
 <div>
-          <div class = "text-center">
-           
-        <strong> <%= @user.full_name %>  </strong>
-
+  <div class = "text-center">    
+    <strong> <%= @user.full_name %>  </strong>
           <br>
-          <p>@<%= @user.username%></p><br>
-      </div>
-         
+    <p>@<%= @user.username%></p><br>
+  </div>      
+</div>
+
+<div class="d-flex justify-content-around align-items-center">
+<div class ='d-block text-align-center'>
+
+<strong><%= @user.tweets.count%></strong>
+<p>Tweets</p>
+</div>
+<div class ='d-block '>
+<strong class ='d-block text-align-center'><%= @user.followed.count%></strong>
+ <p>Following</p>  
+</div>
+<div class ='d-block text-align-center'>
+
+<span><%= @user.followers.count%></span>
+<p>Followers</p> 
+</div>
 </div>

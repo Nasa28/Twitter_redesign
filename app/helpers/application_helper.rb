@@ -22,4 +22,9 @@ module ApplicationHelper
   def background_image(user)
     link_to image_tag cover_photo(user, 1000), class: "cover_image" if signed_in?
   end
+
+  def menu_photo(user)
+    image_tag user_photo(user, 1000), class: "rounded" if signed_in?
+ end
+
 end

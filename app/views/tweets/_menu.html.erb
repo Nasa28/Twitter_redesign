@@ -1,27 +1,27 @@
 <div class="menu">
 <div class = "d-flex">
 <div >
-<%= profile_photo(current_user)%>
+<%= menu_photo(current_user)%>
     </div>
     
     <div><strong><%= current_user.full_name.split.map(&:capitalize)*' ' if signed_in?%></strong></div>
 </div>
-    <div class = 'follows d-flex  justify-content-around'>
+    <div class = 'follows d-flex  justify-content-around align-items-center'>
     <div>
-    <strong>
-    count
+    <strong class ="text-light" >
+    <%= current_user.followed.count if signed_in?%>
     </strong>
-    <p>
-    following
+    <p class = 'text-secondary'>
+    Following
     </p>
     </div>
 
     <div>
-    <strong>
-    count
+    <strong class ="text-light">
+   <%= current_user.followers.count if signed_in?%>
     </strong>
-    <p>
-    followers
+    <p class = 'text-secondary'>
+    Followers
     </p>
     </div>
     </div>

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
     devise_for :users, controllers:  { registrations: 'users/registrations' }
   
- get '/show/:id', to: 'users#show', as: :user_show
+    resources :users, only: %w[show]
 
  get '/follow_user/:id', to: 'users#follow_user', as: :follow_user
  get '/unfollow_user/:id', to: 'users#unfollow_user', as: :unfollow_user
