@@ -29,7 +29,6 @@ module ApplicationHelper
 
  def who_to_follow(user)
   result = ' '
-  return if signed_in?
   unless @follows.include?(user.id)
     result += '<div class = "justify-content-around mt-2 align-items-center">'
     result += profile_photo(user) 

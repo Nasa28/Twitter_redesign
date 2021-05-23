@@ -4,35 +4,31 @@
 <%= menu_photo(current_user)%>
     </div>
     
-    <div><strong class= "text-secondary"><%= current_user.full_name.split.map(&:capitalize)*' ' if signed_in?%></strong></div>
+    <div class= "text-secondary"><strong ><%= current_user.full_name.split.map(&:capitalize)*' ' %></strong><br>@<%= current_user.username %> </div>
 </div>
     <div class="user-photo d-flex flex-wrap justify-content-between p-2 border-bottom border-dark text-light">
             <div class="follow text-center ">
-                <h5><%= current_user.followed.count if signed_in?%> <br><small class= "text-secondary">Following</small></h5>
+                <h5><%= current_user.followed.count %> <br><small class= "text-secondary">Following</small></h5>
             </div>
             <div class="follow text-center">
-                <h5><%= current_user.followers.count if signed_in? %><br><small class= "text-secondary">Followers</small></h5>
+                <h5><%= current_user.followers.count %><br><small class= "text-secondary">Followers</small></h5>
             </div>
         </div>
+        <div>
     <ul >
         <%= link_to root_path do %>
-            <%= fa_icon "home 2x", class: "nav-link text-light"%>
+            <%= fa_icon "home 2x", class: "nav-link text-secondary"%>
         <%end%> 
-            <strong><%= link_to "HOME", root_path, class: "text-light"%></strong>
+            <strong><%= link_to "Home", root_path, class: "text-secondary text-decoration-none"%></strong>
       
         <%= link_to root_path do %>
-            <%= fa_icon "globe 2x", class: "nav-link text-light"%>
+            <%= fa_icon "user 2x", class: "nav-link text-secondary"%>
         <%end%> 
-            <strong><%= link_to "CONNECT", root_path, class: "text-light"%></strong>
-        
-        <%= link_to root_path do %>
-            <%= fa_icon "hashtag 2x", class: "nav-link text-light"%>
-        <%end%> 
-            <strong><%= link_to "DISCOVER", root_path, class: "text-light"%></strong>
-      
-        <%= link_to root_path do %>
-            <%= fa_icon "user 2x", class: "nav-link text-light"%>
-        <%end%> 
-            <strong><%= link_to "PROFILE", root_path, class: "text-light"%></strong>
+            <strong><%= link_to "Profile", edit_user_registration_path, class: "text-secondary text-decoration-none"%></strong>
+             <%=link_to destroy_user_session_path, method: :delete, data: {confirm: "Continue with sign out?"} do %>
+             <%= fa_icon 'sign-out 2x' ,  class: "nav-link text-secondary"%>
+                <%end%> 
+                <strong><%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: {confirm: "Continue with sign out?"}, class: "text-secondary text-decoration-none"%></strong>
     </ul>
+    </div>
 </div>
