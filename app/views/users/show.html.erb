@@ -1,6 +1,6 @@
 <div class="grid-container">
   <div>
-    <%= render 'tweets/menu'%>
+    <%= render 'shared/menu'%>
   </div>
   <div> 
     <%= render partial: 'layouts/navbar' %>
@@ -10,14 +10,14 @@
           <div class="pad">
       <%= render partial: 'layouts/navbar1' %>
         <%= render 'tweets/form'%>
-        <%= render 'tweets/feed'%>
+        <%= render 'shared/feed'%>
         </div>
     </div>  
 
   <div class="col">
     <%= render 'users/profile'%>
    <strong> FOLLOWED BY</strong>
-        <%= render 'tweets/followed'%>
+        <%= render 'shared/followed'%>
   </div>
   </div>
       </div>
