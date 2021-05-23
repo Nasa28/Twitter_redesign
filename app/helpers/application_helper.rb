@@ -26,4 +26,16 @@ module ApplicationHelper
   def menu_photo(user)
     image_tag user_photo(user, 1000), class: "rounded" if signed_in?
  end
+
+ def who_to_follow(user)
+  result = ' '
+  return if signed_in?
+  unless @follows.include?(user.id)
+    result += '<div class = "justify-content-around mt-2 align-items-center">'
+    result += profile_photo(user) 
+    result += link_to  user.full_name.split.map(&:capitalize)*' ',
+    user_path(user), class: "text-decoration-none"
+  end
+  result.html_safe
+ end
 end

@@ -6,6 +6,7 @@ class TweetsController < ApplicationController
   def index
     @tweets = Tweet.all.order('created_at DESC')
     @tweet = Tweet.new
+    @users = User.all_users(current_user.id).order('created_at DESC')
     @follows = current_user.followed.pluck(:follower_id)
   end
 
