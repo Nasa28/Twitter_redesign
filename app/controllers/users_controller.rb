@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     @tweet =Tweet.new
     @my_tweet = @tweet.author
     @tweets = Tweet.all
-    @users = User.all
+    # @users = user.followed.includes(:follower)
   end
 
   def follow_user

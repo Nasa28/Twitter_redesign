@@ -11,9 +11,13 @@ class User < ApplicationRecord
   has_many :tweets, foreign_key: 'author_id', dependent: :destroy
   has_one_attached :photo, dependent: :destroy
   has_one_attached :cover_image, dependent: :destroy
+ 
   has_many :followers, class_name: 'Following', foreign_key: 'follower_id'
   has_many :followed, class_name: 'Following', foreign_key: 'followed_id'
- 
+  def self.all_users(user_id)
+    User.where('id != ?', user_id) 
+  end
+
   def email_required?
     false
   end
@@ -22,7 +26,7 @@ class User < ApplicationRecord
     false
   end
 
-  def followings?(other_user)
-  followed.include?(other_user)
+  def following?(other_user)
+  follows.include?(other_user)
   end
 end

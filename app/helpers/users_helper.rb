@@ -1,5 +1,6 @@
 module UsersHelper
   def follow_btn(user)
+    return unless signed_in?
     return if user == current_user
     if current_user.followed.pluck(:follower_id).include?(user.id)
       link_to unfollow_user_path(user) do

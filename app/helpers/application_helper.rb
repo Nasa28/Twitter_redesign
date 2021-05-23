@@ -26,5 +26,4 @@ module ApplicationHelper
   def menu_photo(user)
     image_tag user_photo(user, 1000), class: "rounded" if signed_in?
  end
-
 end
