@@ -1,27 +1,24 @@
 <div>    
-    <% @tweets.each do |tweet|%>
-          
-          <div class="d-flex mt-4 justify-item-center">
-          <div>
-            <%= profile_photo(tweet.author)%>          
-          </div>
-          <div>
-           <%= link_to user_path(tweet.author), class: "text-decoration-none" do %>
-                  <%= tweet.author.full_name %>
-                <% end %>
+    <% @tweets.each do |tweet|%>   
+    <div class="d-flex mt-4 justify-item-center">
+      <div>
+        <%= profile_photo(tweet.author)%>          
+      </div>
+      <div>
+        <%= link_to user_path(tweet.author), class: "text-decoration-none" do %>
+        <%= tweet.author.full_name %>
+    <% end %>
           <br>
           <p>
             <%= tweet.text  %>
             </p>
-          </div>
+      </div>
            </div>
           <div>
-         
-          <%= image_tag tweet.image if tweet.image.attached? %>
-          </div>
-            Tweeted @<%= tweet.created_at.strftime("%d %b %Y at %I:%M %p") %>
-            <span> <%= link_to 'Edit', edit_tweet_path(tweet) %></span>
-              
+         <%= tweet_image%>
+    </div>
+        Tweeted @<%= tweet.created_at.strftime("%d %b %Y at %I:%M %p") %>
+            <span> <%= link_to 'Edit', edit_tweet_path(tweet) %></span>  
             <span><%= link_to "Delete", tweet_path(tweet), method: :delete, data: {confirm: "Are you sure you want to delete this tweet?"} %>
               </span>
     <%end%>

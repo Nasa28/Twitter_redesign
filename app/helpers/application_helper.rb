@@ -37,4 +37,10 @@ module ApplicationHelper
   end
   result.html_safe
  end
+ def nav 
+  if !signed_in?
+    render partial: 'layouts/navbar' 
+     
+  end
+ end
 end

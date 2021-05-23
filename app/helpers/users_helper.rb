@@ -15,14 +15,14 @@ module UsersHelper
   def alert_me
     result = ' '
     if notice.present?
-      result += '<div class="alert alert-info" role="alert">'
+      result += '<div class="alert alert-info m-0" >'
       result += '<p>'
       result += notice
       result += '</p>'
       result += '</div>'
     end
     if alert.present?
-      result += '<div class="alert alert-danger" role="alert">'
+      result += '<div class="alert alert-danger m-0" >'
       result += '<p>'
       result += alert
       result += '</p>'
