@@ -34,7 +34,7 @@ module ApplicationHelper
     result += '<div class = "justify-content-around mt-2 align-items-center">'
     result += profile_photo(user) 
     result += link_to  user.full_name.split.map(&:capitalize)*' ',
-    user_path(user), class: "text-decoration-none"
+    user_path(user), class: "text-decoration-none fw-bold p-3"
   end
   result.html_safe
  end

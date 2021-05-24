@@ -1,12 +1,12 @@
 <div>    
     <% @tweets.each do |tweet|%>   
-    <div class="d-flex mt-4 justify-item-center">
+    <div class="d-flex mt-4 align-items-center">
       <div>
         <%= profile_photo(tweet.author)%>          
       </div>
-      <div>
-        <%= link_to user_path(tweet.author), class: "text-decoration-none" do %>
-        <%= tweet.author.full_name %>
+      <div class = "p-3">
+        <%= link_to user_path(tweet.author), class: "text-decoration-none fw-bold" do %>
+        <%= tweet.author.full_name.split.map(&:capitalize)*' ' %>
     <% end %>
           <br>
           <p>
