@@ -1,10 +1,10 @@
 <div class="menu">
-  <div class = "d-flex">
+  <div class = "d-flex justify-content-center align-items-center">
     <div >
     <%= menu_photo(current_user)%>
     </div>
     
-    <div class= "text-secondary"><strong ><%= current_user.full_name.split.map(&:capitalize)*' ' %></strong><br>@<%= current_user.username %> 
+    <div class= "text-secondary "><strong ><%= link_to current_user.full_name.split.map(&:capitalize)*' ', user_path , class:"text-decoration-none text-secondary"%></strong><br>@<%= current_user.username %> 
     </div>
     </div>
     <div class="user-photo d-flex flex-wrap justify-content-between p-2 border-bottom border-dark text-light">
