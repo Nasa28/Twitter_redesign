@@ -5,7 +5,9 @@ class UsersController < ApplicationController
     @tweet =Tweet.new
     @my_tweet = @tweet.author
     @tweets = Tweet.all
-    # @users = user.followed.includes(:follower)
+    @pagy, @tweets = pagy(Tweet.all.order('created_at DESC'), items: 10)
+    @pagy_follow, @users = pagy(User.all_users(current_user.id).order('created_at DESC'), items: 10)
+    @follows = current_user.followed.pluck(:follower_id)
   end
 
   def follow_user

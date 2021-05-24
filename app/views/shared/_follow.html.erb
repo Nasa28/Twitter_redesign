@@ -2,3 +2,4 @@
         <% @users.each do |user| %>
      <%= who_to_follow(user)%>
     <% end %>
+    <%== pagy_bootstrap_nav(@pagy_follow).html_safe%>

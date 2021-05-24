@@ -4,9 +4,9 @@ class TweetsController < ApplicationController
 
   # GET /tweets or /tweets.json
   def index
-    @tweets = Tweet.all.order('created_at DESC')
+    @pagy,@tweets = pagy(Tweet.all.order('created_at DESC'), items: 10)
     @tweet = Tweet.new
-    @users = User.all_users(current_user.id).order('created_at DESC')
+    @pagy_follow, @users = pagy(User.all_users(current_user.id).order('created_at DESC'), items: 10)
     @follows = current_user.followed.pluck(:follower_id)
   end
 
