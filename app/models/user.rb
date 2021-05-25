@@ -24,6 +24,13 @@ class User < ApplicationRecord
                   { less_than: 5.megabytes,
                   message:
                   "should be less than 5MB" }
+validates :cover_image,
+                  content_type: { in: %w[image/jpeg image/gif image/png],
+                  message: "must be a valid image format" },
+                  size:
+                  { less_than: 5.megabytes,
+                  message:
+                  "should be less than 5MB" }
   
   def self.all_users(user_id)
     User.where('id != ?', user_id) 
