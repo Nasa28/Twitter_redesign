@@ -3,11 +3,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @tweet =Tweet.new
-    @my_tweet = @tweet.author
-    @tweets = Tweet.all
     @pagy, @tweets = pagy(Tweet.all.order('created_at DESC'), items: 10)
     @pagy_follow, @users = pagy(User.all_users(current_user.id).order('created_at DESC'), items: 10)
-    @follows = current_user.followed.pluck(:follower_id)
+    @follows = @user.followers.includes(:followed)
   end
 
   def follow_user

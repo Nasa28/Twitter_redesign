@@ -14,10 +14,14 @@ class User < ApplicationRecord
  
   has_many :followers, class_name: 'Following', foreign_key: 'follower_id'
   has_many :followed, class_name: 'Following', foreign_key: 'followed_id'
+  
+  default_scope -> { includes(:photo_attachment) }
+  
   def self.all_users(user_id)
     User.where('id != ?', user_id) 
   end
 
+  
   def email_required?
     false
   end

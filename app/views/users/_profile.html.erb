@@ -17,16 +17,16 @@
 <div class="d-flex justify-content-around align-items-center">
 <div class ='d-block text-align-center'>
 
-<strong><%= @user.tweets.count%></strong>
+<strong><%= @user.tweets.size%></strong>
 <p>Tweets</p>
 </div>
 <div class ='d-block '>
-<strong class ='d-block text-align-center'><%= @user.followed.count%></strong>
+<strong class ='d-block text-align-center'><%= @user.followed.size%></strong>
  <p>Following</p>  
 </div>
 <div class ='d-block text-align-center'>
 
-<span><%= @user.followers.count%></span>
+<span><%= @user.followers.size%></span>
 <p>Followers</p> 
 </div>
 </div>

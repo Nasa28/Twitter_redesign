@@ -13,10 +13,10 @@
     </div>
     <div class="user-photo d-flex flex-wrap justify-content-between p-2 border-bottom border-dark text-light">
             <div class="follow text-center ">
-                <h5><%= current_user.followed.count %> <br><small class= "text-secondary">Following</small></h5>
+                <h5><%= current_user.followed.size %> <br><small class= "text-secondary">Following</small></h5>
             </div>
             <div class="follow text-center">
-                <h5><%= current_user.followers.count %><br><small class= "text-secondary">Followers</small></h5>
+                <h5><%= current_user.followers.size %><br><small class= "text-secondary">Followers</small></h5>
             </div>
         </div>
         <div>

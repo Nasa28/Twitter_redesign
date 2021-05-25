@@ -1,8 +1,8 @@
 module ApplicationHelper
   include Pagy::Frontend
-  def user_photo(user, size =10)
+  def user_photo(user, size =30)
     if user.photo.attached?
-      user.photo.variant(resize: "#{size}x#{size}!")
+      user.photo.variant(resize: "#{size}x#{size}!").processed
     else
       gravatar_image_url(user.email, size: size)
     end
