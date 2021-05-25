@@ -7,7 +7,7 @@ class TweetsController < ApplicationController
     @tweet = Tweet.new
     @pagy, @tweets = pagy(Tweet.user_tweets, items: 10)
     @pagy_follow, @users = pagy(User.all_users(current_user.id).order('created_at DESC'), items: 10)
-    @follows = current_user.followed.pluck(:follower_id)
+    @follow_list = current_user.followed.pluck(:follower_id)
   end
 
   # GET /tweets/1 or /tweets/1.json

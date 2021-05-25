@@ -30,7 +30,7 @@ module ApplicationHelper
 
  def who_to_follow(user)
   result = ' '
-  unless @follows.include?(user.id)
+  unless @follow_list.include?(user.id)
     result += '<div class = "justify-content-around mt-2 align-items-center">'
     result += profile_photo(user) 
     result += link_to  user.full_name.split.map(&:capitalize)*' ',
