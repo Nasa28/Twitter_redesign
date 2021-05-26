@@ -5,9 +5,11 @@
 > This project is a prototype of the Twitter app where a logged in user can create a tweet, view other users profile, follow other users, see who other users are following, create a tweet, delete ONLY his tweet.
 The project is basically for accademic purposes.
 
+- HOME PAGE
 
 ![screenshot](./app/assets/images/home.png)
 
+PROFILE PAGE
 
 ![screenshot](./app/assets/images/profile.png)
 
