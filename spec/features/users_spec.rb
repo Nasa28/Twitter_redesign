@@ -59,5 +59,5 @@ RSpec.feature "Users", type: :feature do
       visit root_path
       expect(page).to have_content('sign in')
     end
-  end
+  end  
 end
