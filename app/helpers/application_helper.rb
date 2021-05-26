@@ -17,15 +17,15 @@ module ApplicationHelper
   end
 
   def profile_photo(user)
-     image_tag user_photo(user, 1000), class: "rounded-circle" if signed_in?
+     image_tag user_photo(user, 1000), class: "rounded-circle" 
   end
 
   def background_image(user)
-    link_to image_tag cover_photo(user, 1000), class: "cover_image" if signed_in?
+    link_to image_tag cover_photo(user, 1000), class: "cover_image" 
   end
 
   def menu_photo(user)
-    image_tag user_photo(user, 1000), class: "rounded" if signed_in?
+    image_tag user_photo(user, 1000), class: "rounded" 
  end
 
  def who_to_follow(user)
