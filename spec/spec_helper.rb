@@ -93,8 +93,5 @@ RSpec.configure do |config|
   #   Kernel.srand config.seed
   #
   require 'active_storage_validations/matchers'
-
-  RSpec.configure do |config|
-    config.include ActiveStorageValidations::Matchers
-  end
+  config.include ActiveStorageValidations::Matchers
 end

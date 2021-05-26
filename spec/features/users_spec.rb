@@ -34,6 +34,13 @@ RSpec.feature 'Users', type: :feature do
       expect(page).to have_content('Sign Out')
     end
   end
+end
+
+RSpec.feature 'Users', type: :feature do
+  let(:user) do
+    User.new(username: 'China', full_name: 'Kalu chinasa', email: 'chinasa24@gmail.com', password: '123456')
+  end
+  let(:my_user) { User.create(username: 'Chinasa', password: '123456') }
 
   context 'loging in:' do
     scenario 'succesfully log in' do
@@ -50,6 +57,7 @@ RSpec.feature 'Users', type: :feature do
       expect(page).to have_content('Invalid Username or password')
     end
   end
+
   context ' Log out' do
     scenario 'log out successfully' do
       visit new_user_session_path

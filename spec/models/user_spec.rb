@@ -25,7 +25,8 @@ RSpec.describe User, type: :model do
       user = User.new(username: 'Nasa', full_name: 'Kalu chinasa ', email: 'kalu@gmail.com', password: '12345').save
       expect(user).to eq(false)
     end
-
+  end
+  context 'user validations' do
     it 'test username length ' do
       user = User.new(username: 'Nasaagukaluagu', full_name: 'chinasa agu', email: 'kalu@gmail.com',
                       password: '123567').save
@@ -43,7 +44,9 @@ RSpec.describe User, type: :model do
                       password: '1234567').save
       expect(user).to eq(true)
     end
+  end
 
+  context 'image and photo validations' do
     it { is_expected.to validate_content_type_of(:photo).allowing('image/jpeg', 'image/png', 'image/gif') }
 
     it { is_expected.to validate_size_of(:photo).less_than(2.megabytes) }
@@ -52,6 +55,7 @@ RSpec.describe User, type: :model do
 
     it { is_expected.to validate_size_of(:cover_image).less_than(2.megabytes) }
   end
+
   context 'Association Test' do
     it 'should have many tweet' do
       user = User.reflect_on_association(:tweets).macro
