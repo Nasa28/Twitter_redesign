@@ -6,27 +6,27 @@
 
   <div class="form-group">
     <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true, autocomplete: "email", class: "form-control mb-3" %>
+    <%= f.text_field :username, autofocus: true, class: "form-control mb-3", id: "username" %>
   </div>
   <div class="form-group">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control mb-3"%>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control mb-3" , id: "email"%>
   </div>
   <div class="form-group">
     <%= f.label :full_name %><br />
-    <%= f.text_field :full_name, autofocus: true, autocomplete: "email", class: "form-control mb-3"%>
+    <%= f.text_field :full_name, autofocus: true,  class: "form-control mb-3" , id: "full_name"%>
   </div>
   <div class="form-group">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", class: "form-control mb-3"%>
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-control mb-3" , id: "password"%>
   </div>
 
   <div class="form-group">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" , id: "password_confirmation" %>
   </div>
 <br>
   <div class="actions">

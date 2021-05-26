@@ -14,8 +14,7 @@
  *= require_self
  *= require font-awesome
  */
- @import "font-awesome";
-
+ 
  body {
    background-color: rgb(244,247,248);
  }

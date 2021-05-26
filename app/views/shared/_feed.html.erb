@@ -18,7 +18,6 @@
          <%= tweet_image%>
     </div>
         Tweeted @<%= tweet.created_at.strftime("%d %b %Y at %I:%M %p") %>
-            <span> <%= link_to 'Edit', edit_tweet_path(tweet) %></span>  
             <span><%= link_to "Delete", tweet_path(tweet), method: :delete, data: {confirm: "Are you sure you want to delete this tweet?"} %>
               </span>
     <%end%>
