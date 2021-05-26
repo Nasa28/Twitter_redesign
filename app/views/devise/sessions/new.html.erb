@@ -10,7 +10,7 @@
 
   <div class="form-field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Enter your password",class: "form-control mb-3" %>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Enter your password",class: "form-control mb-3", id: 'password' %>
   </div>
 
   <% if devise_mapping.rememberable? %>

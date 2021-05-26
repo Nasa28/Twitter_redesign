@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Users", type: :feature do
-  let(:user) { User.new(username: 'Chinasa', full_name: 'Kalu chinasa', email: 'chinasa@gmail.com', password: '123456', ) }
+  let(:user) { User.new(username: 'China', full_name: 'Kalu chinasa', email: 'chinasa24@gmail.com', password: '123456', ) }
   let(:my_user) { User.create(username: 'Chinasa', password: '123456') }
   context 'Create a new user' do
 
@@ -34,15 +34,19 @@ RSpec.feature "Users", type: :feature do
     end
   end
 
-  context ' Log in user' do
-    scenario 'should not be successful' do
+  context 'loging in:' do
+    scenario 'succesfully log in' do
       visit new_user_session_path
-      within('form') do
-        fill_in 'username', with: my_user.username
-        fill_in 'password', with: my_user.password
-      end
-        click_button 'Log In'
-      expect(page).to_not have_content('Sign Out')
+      fill_in 'username', with: my_user.username
+      fill_in 'password', with: my_user.password
+      click_on 'Log In'
+      expect(page).to have_content('Signed in successfully')
+    end
+    scenario 'unsuccesfully Log In' do
+      visit new_user_session_path
+      fill_in 'password', with: my_user.password
+      click_on 'Log In'
+      expect(page).to have_content('Invalid Username or password')
     end
   end
 end
