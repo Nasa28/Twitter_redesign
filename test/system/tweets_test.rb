@@ -1,45 +1,45 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class TweetsTest < ApplicationSystemTestCase
   setup do
     @tweet = tweets(:one)
   end
 
-  test "visiting the index" do
+  test 'visiting the index' do
     visit tweets_url
-    assert_selector "h1", text: "Tweets"
+    assert_selector 'h1', text: 'Tweets'
   end
 
-  test "creating a Tweet" do
+  test 'creating a Tweet' do
     visit tweets_url
-    click_on "New Tweet"
+    click_on 'New Tweet'
 
-    fill_in "Author", with: @tweet.author_id
-    fill_in "Text", with: @tweet.text
-    click_on "Create Tweet"
+    fill_in 'Author', with: @tweet.author_id
+    fill_in 'Text', with: @tweet.text
+    click_on 'Create Tweet'
 
-    assert_text "Tweet was successfully created"
-    click_on "Back"
+    assert_text 'Tweet was successfully created'
+    click_on 'Back'
   end
 
-  test "updating a Tweet" do
+  test 'updating a Tweet' do
     visit tweets_url
-    click_on "Edit", match: :first
+    click_on 'Edit', match: :first
 
-    fill_in "Author", with: @tweet.author_id
-    fill_in "Text", with: @tweet.text
-    click_on "Update Tweet"
+    fill_in 'Author', with: @tweet.author_id
+    fill_in 'Text', with: @tweet.text
+    click_on 'Update Tweet'
 
-    assert_text "Tweet was successfully updated"
-    click_on "Back"
+    assert_text 'Tweet was successfully updated'
+    click_on 'Back'
   end
 
-  test "destroying a Tweet" do
+  test 'destroying a Tweet' do
     visit tweets_url
     page.accept_confirm do
-      click_on "Destroy", match: :first
+      click_on 'Destroy', match: :first
     end
 
-    assert_text "Tweet was successfully destroyed"
+    assert_text 'Tweet was successfully destroyed'
   end
 end

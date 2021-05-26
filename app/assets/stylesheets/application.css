@@ -14,34 +14,35 @@
  *= require_self
  *= require font-awesome
  */
- 
- body {
-   background-color: rgb(244,247,248);
- }
- .nav {
-   background-color: rgb(83,168,233);
- }
 
- .my-row, section{
+body {
+  background-color: rgb(244, 247, 248);
+}
+
+.nav {
+  background-color: rgb(83, 168, 233);
+}
+
+.my-row,
+section {
   display: flex;
- }
+}
 
- .pad {
-   padding: 0 30px;
- }
+.pad {
+  padding: 0 30px;
+}
 
- .menu {
-   background-color: rgb(33,50,71);
+.menu {
+  background-color: rgb(33, 50, 71);
   height: 100%;
- }
+}
 
- .grid-container {
+.grid-container {
   display: grid;
   grid-template-columns: 180px auto;
 }
 
 img {
- 
   height: 95px;
   width: 95px;
 }
@@ -51,23 +52,22 @@ img {
   padding-left: 20px;
   margin: 10px 0;
   align-items: center;
-
 }
 
 .pro div:first-child {
   padding-right: 20px;
 }
 
-.cover_image{ 
+.cover_image {
   min-width: 100%;
   min-height: 350px;
   display: block; /* remove extra space below image */
-    }
+}
 
 .rounded {
   height: 70px;
   width: 70px;
-  padding-right:5px;
+  padding-right: 5px;
 }
 
 .my_form {
