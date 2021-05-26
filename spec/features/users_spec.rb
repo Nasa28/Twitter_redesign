@@ -49,4 +49,15 @@ RSpec.feature "Users", type: :feature do
       expect(page).to have_content('Invalid Username or password')
     end
   end
+  context ' Log out' do 
+    scenario 'log out successfully' do
+      visit new_user_session_path
+      fill_in 'username', with: my_user.username
+      fill_in 'password', with: my_user.password
+      click_on 'Log In'
+      click_on 'Sign Out'
+      visit root_path
+      expect(page).to have_content('sign in')
+    end
+  end
 end
