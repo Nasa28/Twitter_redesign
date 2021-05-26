@@ -40,12 +40,36 @@ RSpec.describe User, type: :model do
       user = User.new(username: 'chinasa', full_name: "Chinasa Kalu", email: 'kalu@gmail.com', password: '1234567').save
       expect(user).to eq(true)
     end
+
+    it { is_expected.to validate_content_type_of(:photo).allowing('image/jpeg','image/png', 'image/gif') }
+
+    it { is_expected.to validate_size_of(:photo).less_than(2.megabytes) }
+
+    it { is_expected.to validate_content_type_of(:cover_image).allowing('image/jpeg','image/png', 'image/gif') }
+
+    it { is_expected.to validate_size_of(:cover_image).less_than(2.megabytes) }
   end
+
+ 
+
+  
 
   context 'Association Test' do
     it 'should have many tweet' do
       user = User.reflect_on_association(:tweets).macro
       expect(user).to eq(:has_many)
     end
+
+    it 'should have many followers' do 
+      user = User.reflect_on_association(:followers).macro
+      expect(user).to eq(:has_many)
+    end
+
+    it 'should have many followers' do 
+      user = User.reflect_on_association(:followed).macro
+      expect(user).to eq(:has_many)
+    end
   end
+
+  
 end

@@ -93,4 +93,9 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+require 'active_storage_validations/matchers'
+
+RSpec.configure do |config|
+  config.include ActiveStorageValidations::Matchers
+end
 end
