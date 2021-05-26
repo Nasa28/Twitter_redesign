@@ -1,6 +1,4 @@
 require 'rails_helper'
-
-
 RSpec.feature "Tweets", type: :feature do
   let(:my_user) { User.create(username: 'Chinasa', password: '123456') }
   context ' Successful tweet' do 
