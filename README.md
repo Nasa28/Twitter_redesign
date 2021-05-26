@@ -6,7 +6,9 @@
 The project is basically for accademic purposes.
 
 
-![screenshot](./app/assets/images/home2.png)
+![screenshot](./app/assets/images/home.png)
+
+
 ![screenshot](./app/assets/images/profile.png)
 
 ## Built With
