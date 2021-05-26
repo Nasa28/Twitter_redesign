@@ -49,11 +49,6 @@ RSpec.describe User, type: :model do
 
     it { is_expected.to validate_size_of(:cover_image).less_than(2.megabytes) }
   end
-
- 
-
-  
-
   context 'Association Test' do
     it 'should have many tweet' do
       user = User.reflect_on_association(:tweets).macro
