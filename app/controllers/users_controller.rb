@@ -3,8 +3,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @tweet =Tweet.new
-    @pagy, @tweets = pagy(Tweet.all.order('created_at DESC'), items: 10)
-    @pagy_follow, @users = pagy(User.all_users(current_user.id).order('created_at DESC'), items: 10)
+    @pagy, @tweets = pagy(Tweet.all.order('created_at DESC'), items: 8)
+    @pagy_follow, @users = pagy(User.all_users(current_user.id).order('created_at DESC'), items: 8)
     @follows = @user.followers.includes(:followed)
   end
 
