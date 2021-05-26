@@ -41,4 +41,11 @@ RSpec.describe User, type: :model do
       expect(user).to eq(true)
     end
   end
+
+  context 'Association Test' do
+    it 'should have many tweet' do
+      user = User.reflect_on_association(:tweets).macro
+      expect(user).to eq(:has_many)
+    end
+  end
 end
