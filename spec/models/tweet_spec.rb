@@ -12,7 +12,7 @@ RSpec.describe Tweet, type: :model do
     end
     it { is_expected.to validate_content_type_of(:image).allowing('image/jpeg', 'image/png', 'image/gif') }
 
-    it { is_expected.to validate_size_of(:image).less_than(2.megabytes) }
+    it { is_expected.to validate_size_of(:image).less_than(6.megabytes) }
   end
   context 'Association Test' do
     it 'should belong to author' do

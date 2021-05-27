@@ -49,11 +49,11 @@ RSpec.describe User, type: :model do
   context 'image and photo validations' do
     it { is_expected.to validate_content_type_of(:photo).allowing('image/jpeg', 'image/png', 'image/gif') }
 
-    it { is_expected.to validate_size_of(:photo).less_than(2.megabytes) }
+    it { is_expected.to validate_size_of(:photo).less_than(6.megabytes) }
 
     it { is_expected.to validate_content_type_of(:cover_image).allowing('image/jpeg', 'image/png', 'image/gif') }
 
-    it { is_expected.to validate_size_of(:cover_image).less_than(2.megabytes) }
+    it { is_expected.to validate_size_of(:cover_image).less_than(6.megabytes) }
   end
 
   context 'Association Test' do
