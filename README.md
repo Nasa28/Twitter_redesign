@@ -3,7 +3,7 @@
 
 -  ![](https://img.shields.io/badge/Microverse-blueviolet)
 
- ## This project is a prototype of the Twitter app where a logged-in user can create a tweet, view other users' profiles, follow other users, see who other users are following, create a tweet, delete ONLY his tweet.
+ ## Meetish app is a prototype of the Twitter app where a logged-in user can create a tweet, view other users' profiles, follow other users, see who other users are following, create a tweet, delete ONLY his tweet.
 
 The project is basically for academic purposes.
 
