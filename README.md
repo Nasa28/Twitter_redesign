@@ -1,8 +1,10 @@
-# Twittter Redesign
+#                           MEETISH APP
+
 
 -  ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> This project is a prototype of the Twitter app where a logged-in user can create a tweet, view other users' profiles, follow other users, see who other users are following, create a tweet, delete ONLY his tweet.
+ ## This project is a prototype of the Twitter app where a logged-in user can create a tweet, view other users' profiles, follow other users, see who other users are following, create a tweet, delete ONLY his tweet.
+
 The project is basically for academic purposes.
 
 - HOME PAGE
@@ -31,7 +33,7 @@ PROFILE PAGE
 
 ## Live Demo
 
-[Click here for Live Demo](https://sheltered-brook-40293.herokuapp.com/)
+[Click here for Live Demo](https://meetish.herokuapp.com/)
 
 
 ## Getting Started
@@ -45,9 +47,9 @@ On your terminal, run
 
 ### Prerequisites
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
+- Ruby: 2.6.3
+- Rails: 5.2.3
+- Postgres: >=9.5
 
 ### Setup
 
