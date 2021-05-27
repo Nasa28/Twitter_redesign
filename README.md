@@ -2,8 +2,8 @@
 
 -  ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> This project is a prototype of the Twitter app where a logged in user can create a tweet, view other users profile, follow other users, see who other users are following, create a tweet, delete ONLY his tweet.
-The project is basically for accademic purposes.
+> This project is a prototype of the Twitter app where a logged-in user can create a tweet, view other users' profiles, follow other users, see who other users are following, create a tweet, delete ONLY his tweet.
+The project is basically for academic purposes.
 
 - HOME PAGE
 
@@ -18,20 +18,20 @@ PROFILE PAGE
 - Ruby v2.7.0
 - Ruby on Rails v6.1.3.1
 - Bootstrap
-- SQLite 3
+- PostgreSQL
 - Devise gem
 - Capybara(Integration test)
 - Rspec (Unit test)
 - Bootstrap
 - Webpack
-- aws 
-- active_storage
-- image_processing gem
+- AWS
+- Active_storage
+- Image_processing gem
 
 
 ## Live Demo
 
-[Click here for Live Demo]('')
+[Click here for Live Demo](https://sheltered-brook-40293.herokuapp.com/)
 
 
 ## Getting Started
@@ -114,7 +114,7 @@ Feel free to check the [issues page](https://github.com/Nasa28/Twitter_redesign/
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-[Gregoire Vella](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details) on Behence for the UI design
+[Gregoire Vella on Behence](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details)  for the UI design
 
 
 
