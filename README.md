@@ -53,6 +53,12 @@ On your terminal, run
 
 ### Setup
 
+Install gems with:
+
+```
+bundle install
+```
+
 Install webpacker with:
 
 ```
@@ -62,12 +68,6 @@ Install ImageMagick with:
 
 ```
 sudo apt-get install imagemagick
-```
-
-Install gems with:
-
-```
-bundle install
 ```
 
 Setup database with:
