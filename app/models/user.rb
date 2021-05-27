@@ -20,14 +20,14 @@ class User < ApplicationRecord
             content_type: { in: %w[image/jpeg image/gif image/png],
                             message: 'must be a valid image format' },
             size:
-            { less_than: 2.megabytes,
+            { less_than: 6.megabytes,
               message:
             'should be less than 2MB' }
   validates :cover_image,
             content_type: { in: %w[image/jpeg image/gif image/png],
                             message: 'must be a valid image format' },
             size:
-            { less_than: 2.megabytes,
+            { less_than: 6.megabytes,
               message:
             'should be less than 5MB' }
 
