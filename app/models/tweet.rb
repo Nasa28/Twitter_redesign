@@ -9,7 +9,8 @@ class Tweet < ApplicationRecord
             { less_than: 2.megabytes,
               message:
             'should be less than 5MB' }
-  default_scope -> { includes(:author) }
+  default_scope -> { includes(:author, image_attachment: :blob) }
+ 
   def self.user_tweets
     includes(:author).all.order('created_at DESC')
   end

@@ -14,7 +14,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  default_scope -> { includes(:photo_attachment) }
+  default_scope -> { includes(photo_attachment: :blob) }
 
   validates :photo,
             content_type: { in: %w[image/jpeg image/gif image/png],
