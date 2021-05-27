@@ -4,11 +4,11 @@
     <%= menu_photo(current_user)%>
     </div>
     
-    <div class= "text-secondary "><strong>
+    <div class= "text-secondary ">
     <%= link_to user_path(current_user), class:"text-decoration-none text-secondary" do%>
     <%=  current_user.full_name.split.map(&:capitalize)*' '%>
     <%end%>
-    </strong><br>@<%= current_user.username %> 
+    <br>@<%= current_user.username %> 
     </div>
     </div>
     <div class="user-photo d-flex flex-wrap justify-content-between p-2 border-bottom border-dark text-light">
@@ -20,20 +20,31 @@
             </div>
         </div>
         <div>
-    <ul >
+    <ul class="list-unstyled">
+    <li class= "pb-2">
         <%= link_to root_path do %>
-            <%= fa_icon "home 2x", class: "nav-link text-secondary"%>
+            <%= fa_icon "home", class: "nav-link text-secondary"%>
         <%end%> 
-            <strong><%= link_to "Home", root_path, class: "text-secondary text-decoration-none"%></strong>
-      
+            <%= link_to "HOME", root_path, class: "text-secondary text-decoration-none"%>
+      </li>
+        <li class= "pb-2">
+        <%= link_to user_path(current_user) do %>
+            <%= fa_icon "user", class: "nav-link text-secondary"%>
+        <%end%> 
+        <%= link_to "PROFILE", user_path(current_user), class: "text-secondary text-decoration-none"%>
+        </li>
+        <li class= "pb-2">
         <%= link_to root_path do %>
-            <%= fa_icon "user 2x", class: "nav-link text-secondary"%>
+            <%= fa_icon "edit", class: "nav-link text-secondary"%>
         <%end%> 
-            <strong><%= link_to "Profile", edit_user_registration_path, class: "text-secondary text-decoration-none"%></strong>
+            <%= link_to "EDIT ACCOUNT", edit_user_registration_path, class: "text-secondary text-decoration-none"%>
+            </li>
+                <li>
              <%=link_to destroy_user_session_path, method: :delete, data: {confirm: "Continue with sign out?"} do %>
-             <%= fa_icon 'sign-out 2x' ,  class: "nav-link text-secondary"%>
+             <%= fa_icon 'sign-out' ,  class: "nav-link text-secondary"%>
                 <%end%> 
-                <strong><%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: {confirm: "Continue with sign out?"}, class: "text-secondary text-decoration-none"%></strong>
+                <%= link_to "SIGN OUT", destroy_user_session_path, method: :delete, data: {confirm: "Continue with sign out?"}, class: "text-secondary text-decoration-none"%>
+        </li>
     </ul>
     </div>
 </div>
