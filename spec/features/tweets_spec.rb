@@ -50,7 +50,7 @@ RSpec.feature 'Tweets', type: :feature do
       click_on 'EDIT ACCOUNT'
       fill_in 'current password', with: ''
       click_on 'Update Changes'
-      expect(page).to have_content('error prohibited this user from being saved')
+      expect(page).to have_content("Current password can't be blank")
     end
   end
 end
