@@ -12,6 +12,17 @@ RSpec.feature 'Tweets', type: :feature do
       click_on 'Post a tweet'
       expect(page).to have_content('Tweet was successfully created')
     end
+
+    scenario 'Tweet create successfully' do
+      visit new_user_session_path
+      fill_in 'username', with: my_user.username
+      fill_in 'password', with: my_user.password
+      click_on 'Log In'
+      click_on 'TWEETS'
+      fill_in 'text', with: 'My wonderful tweet says I dont agree with the concept of moving validation to the controller controllers and this is a test'
+      click_on 'Post a tweet'
+      expect(page).to have_content('New Tweet')
+    end
   end
 
   context 'Edit user profile' do
@@ -20,7 +31,7 @@ RSpec.feature 'Tweets', type: :feature do
       fill_in 'username', with: my_user.username
       fill_in 'password', with: my_user.password
       click_on 'Log In'
-      click_on 'Profile'
+      click_on 'EDIT ACCOUNT'
       fill_in 'current password', with: my_user.password
       click_on 'Update Changes'
       expect(page).to have_content('Your account has been updated successfully')
