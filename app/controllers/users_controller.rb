@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def follow_user
     user = User.find(params[:id])
     follow = Following.create(followed_id: current_user.id, follower_id: user.id)
-    flash[:notice] = "You are now follwoing #{user.username}"
+    flash[:notice] = "You are now following #{user.username}"
     redirect_to user_path(user) if follow.save
   end
 
