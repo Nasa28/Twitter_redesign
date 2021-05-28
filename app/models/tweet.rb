@@ -1,5 +1,5 @@
 class Tweet < ApplicationRecord
-  validates :text, presence: true, length: { maximum: 115 }
+  validates :text, presence: true, length: { maximum: 95 }
   belongs_to :author, class_name: 'User'
   has_one_attached :image
   validates :image,
