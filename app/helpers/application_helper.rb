@@ -17,6 +17,9 @@ module ApplicationHelper
   end
 
   def profile_photo(user)
+    image_tag user_photo(user, 1000), class: 'rounded-circle my_img'
+  end
+  def profile_page_photo(user)
     image_tag user_photo(user, 1000), class: 'rounded-circle'
   end
 
