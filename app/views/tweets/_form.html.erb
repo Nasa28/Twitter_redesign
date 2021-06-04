@@ -1,0 +1,21 @@
+<%= form_with model: @tweet do |form| %>
+  <% if form.object.errors.any?%>
+    <div class="alert alert-danger">
+    <% form.object.errors.full_messages.each do |message|%>
+    <div> <%= message%> </div>
+    <%end%>
+    </div>
+  <%end%>
+  <div class="form-field">
+    <%= form.label :TWEET %>
+    <%= form.text_area :text, class: "form-control", placeholder: "Type your tweet here" , id: 'text'%>
+  </div>
+    <br>
+  <div class="actions">
+    <%= form.submit "Post a tweet", class:'btn btn-primary' %>
+  </div>
+  <br>
+  <span class="image">
+<%= form.file_field :image  %>
+</span>
+<% end %>

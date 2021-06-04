@@ -1,0 +1,27 @@
+<div class="grid-container">
+  <div>
+    <%= render 'shared/menu'%>
+  </div>
+  <div> 
+    <%= render partial: 'layouts/navbar' %>
+    <div class = "my-row" >
+    <div class="col-9">
+    <div><%= background_image(@user)%></div>
+          <div class="pad">
+      <%= render partial: 'layouts/navbar1' %>
+        <%= render 'tweets/form'%>
+        <%= render 'shared/feed'%>
+        </div>
+    </div>  
+
+  <div class="col">
+    <%= render 'users/profile'%>
+   <strong class = "m-3"> FOLLOWED BY</strong>
+        <%= render 'shared/followed'%>
+  </div>
+  </div>
+      </div>
+      
+</div>
+    
+    

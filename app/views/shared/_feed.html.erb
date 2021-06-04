@@ -1,0 +1,26 @@
+<div>    
+    <% @tweets.each do |tweet|%>   
+    <div class="d-flex mt-4 align-items-center">
+      <div>
+        <%= profile_photo(tweet.author)%>          
+      </div>
+      <div class = "p-1">
+        <%= link_to user_path(tweet.author), class: "text-decoration-none fw-bold" do %>
+        <%= tweet.author.full_name.split.map(&:capitalize)*' ' %>
+    <% end %>
+          <br>
+          <p>
+            <%= tweet.text  %>
+            </p>
+      </div>
+           </div>
+          <div>
+         <%= tweet_image(tweet)%>
+    </div>
+        Tweeted @<%= tweet.created_at.strftime("%d %b %Y at %I:%M %p") %>
+            <span><%= link_to "Delete", tweet_path(tweet), method: :delete, data: {confirm: "Are you sure you want to delete this tweet?"} if current_user == tweet.author %>
+              </span>
+    <%end%>
+</div>
+<br>
+<%== pagy_bootstrap_nav(@pagy).html_safe%>
